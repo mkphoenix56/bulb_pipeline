@@ -19,7 +19,7 @@ phases:
       - pwd
       - ls
       - terraform init -no-color
-      - terraform plan --auto-approve
+      - terraform plan
       - ls
  
   post_build: 
