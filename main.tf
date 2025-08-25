@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 resource "aws_s3_bucket" "artifact_bucket" {
-  bucket = "mk-bucket-artifacts"
+  bucket = "mk101-bucket-artifacts"
 
   tags = {
     Name        = "artifact_bucket"
