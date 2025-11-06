@@ -172,7 +172,7 @@ resource "aws_codepipeline" "phoenix_backend_pipeline" {
         Owner          = "mkphoenix56"
         Repo           = "farm-stack-backend"
         Branch         = "main"
-        OAuthToken     = "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"
+        OAuthToken     = "data.aws_ssm_parameter.phoenix_github_token.value"
       }
     }
   }
