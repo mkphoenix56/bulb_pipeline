@@ -100,6 +100,8 @@ resource "aws_instance" "phoenix_backend_server" {
   subnet_id              = aws_subnet.phoenix_public_subnet.id
   vpc_security_group_ids = [aws_security_group.phoenix_backend_sg.id]
   key_name               = "my-first-key"
+  tags = {
+    Name        = "Mk_Backend_Server" }
  
   user_data = <<EOF
 #!/bin/bash
@@ -159,6 +161,8 @@ resource "aws_instance" "phoenix_frontend_server" {
   subnet_id              = aws_subnet.phoenix_public_subnet.id
   vpc_security_group_ids = [aws_security_group.phoenix_frontend_sg.id]
   key_name = "my-first-key"
+    tags = {
+    Name        = "Mk_Frontend_Server" }
  
   user_data = <<EOF
 #!/bin/bash
